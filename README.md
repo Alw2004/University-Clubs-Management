@@ -1,1 +1,1 @@
-# Universoty-Clubs-Management
+# University-Clubs-Management
