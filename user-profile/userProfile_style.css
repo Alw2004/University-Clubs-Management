@@ -1,0 +1,176 @@
+/* userProfile_style.css */
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #3b82f6;
+    --accent-color: #f59e0b;
+    --background: #f8fafc;
+    --card-bg: #ffffff;
+    --text-color: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --radius: 12px;
+    --shadow: 0 1px 3px rgba(0,0,0,0.12);
+}
+
+body {
+    background: var(--background);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container.light-style {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.account-settings-links .list-group-item {
+    padding: 1rem 1.5rem;
+    border: none;
+    color: var(--text-muted);
+    transition: all 0.2s ease;
+}
+
+.account-settings-links .list-group-item.active {
+    color: var(--primary-color);
+    background: rgba(37, 99, 235, 0.1);
+    border-left: 4px solid var(--primary-color);
+    font-weight: 600;
+}
+
+.account-settings-links .list-group-item:hover:not(.active) {
+    background: rgba(37, 99, 235, 0.05);
+    color: var(--primary-color);
+}
+
+.form-label {
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    transition: border-color 0.2s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background: var(--secondary-color);
+    transform: translateY(-1px);
+}
+
+.btn-default {
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+    transition: all 0.2s ease;
+}
+
+.btn-default:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.media.align-items-center {
+    padding: 2rem;
+    text-align: center;
+}
+
+.ui-w-80 {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+    padding: 3px;
+}
+
+.account-settings-fileinput {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.btn-outline-primary {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    transition: all 0.2s ease;
+}
+
+.btn-outline-primary:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.text-light {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.tab-content {
+    padding: 2rem;
+}
+
+hr {
+    border-color: var(--border-color);
+}
+
+input[readonly] {
+    background: rgba(226, 232, 240, 0.3);
+    cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .row-bordered {
+        flex-direction: column;
+    }
+    
+    .col-md-3 {
+        width: 100%;
+    }
+    
+    .account-settings-links .list-group-item {
+        border-left: none !important;
+        border-bottom: 2px solid var(--border-color);
+    }
+    
+    .media.align-items-center {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .media-body {
+        margin-top: 1rem;
+        margin-left: 0 !important;
+    }
+}
+
+/* Add this to head section */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
